@@ -23,20 +23,24 @@ class _QuizScreenState extends State<QuizScreen> {
       backgroundColor: Color.fromARGB(255, 13, 11, 112),
       body: Container(
         margin: EdgeInsets.symmetric(vertical: 16, horizontal: 35),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text(
-              "QCM Stat-Proba",
-              style: TextStyle(color: Colors.white, fontSize: 25),
-            ),
-            _questionWidget(),
-             _answerList(),
-             _nextButton(),
-             SizedBox(height: 50.0,),
-             Text('Made with ♥ by M&H'),
-            //  Text('Good luck', style: TextStyle(color: Colors.white,)),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(height: 50.0,),
+              Text(
+                "QCM Stat-Proba",
+                style: TextStyle(color: Colors.white, fontSize: 25),
+              ),
+              SizedBox(height: 50.0,),
+              _questionWidget(),
+               _answerList(),
+               _nextButton(),
+               SizedBox(height: 50.0,),
+               Text('Made with ♥ by M&H'),
+              //  Text('Good luck', style: TextStyle(color: Colors.white,)),
+            ],
+          ),
         ),
       ),
     );
@@ -147,13 +151,14 @@ class _QuizScreenState extends State<QuizScreen> {
     if(score>=questionList.length*0.6){
       isPassed=true;
     }
-    String title=isPassed?"Passed":"Failed";
+    String title=isPassed?"Bravoo!! ":"Essaie encore! ";
     return AlertDialog(
       title: Text(
         title+"|Score is $score",
       style: TextStyle(color:isPassed?Colors.green:Colors.redAccent),
       ),
-      content: ElevatedButton(child: const Text("Restart"),
+      content: ElevatedButton(child: const Text("Recommencer"),
+      
       onPressed: (){
         Navigator.pop(context);
         setState((){

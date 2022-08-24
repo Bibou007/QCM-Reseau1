@@ -35,27 +35,27 @@ List<Question> getQuestions(){
     list.add(
       Question("On considère un lot de dix machines à laver. Chaque machine a une probabilité de tomber en panne de 1%. Quelle est la loi de probabilité suivie par la variable aléatoire 'Nombre de machine en panne'? On considère qu'il y a indépendance entre les différentes machines.", 
       [
-        Answers("Loi Binomiale ", false),
+        Answers("Loi Binomiale ", true),
         Answers("Loi de Poisson", false),
         Answers("Loi Normale ", false),
-        Answers("Loi de Bernouillie", true),
+        Answers("Loi de Bernouillie", false),
       ])
     );
   list.add(
     Question("Une machine produit des objets dont 3% sont de mauvaise qualité. Un client reçoit un lot de 400 objets. La variable F qui a chaque echantillon de 400 objets associe le pourcentage de defectueux suit approximativement:", 
     [
-      Answers("Une loi binomiale", false),
       Answers("Une loi de poisson", false),
-      Answers("Une loi normale", true),
+      Answers("Une loi Binomiale", true),
+      Answers("Une loi normale", false),
       Answers("Une distribution d'échantillonage", false),
     ]));
     list.add(
-      Question(" Parmi les propriétés suivantes définissant une loi de Bernouilli, laquelle est fausse ",
+      Question(" Parmi les propriétés suivantes définissant une loi de Bernouillie, laquelle est fausse ",
       [
         Answers("La variable statistique ne peut prendre que deux valeurs", false),
-        Answers("La probabilité associée vaut soit 1 soit 0", false),
-        Answers("La variable statistique est discrète", true),
-        // Answers("", false),
+        Answers("La probabilité associée vaut soit 1 soit 0", true),
+        Answers("La variable statistique est discrète", false),
+       
       ])
     );
     
@@ -63,9 +63,10 @@ List<Question> getQuestions(){
     list.add(
       Question("On donne P(B)=0.1;P(B/A)=0.4 et P(A)=0.2. Alors P(A/B) est égale à:",
       [
+        
+        Answers("0.5", false),
         Answers("0.08", false),
-        Answers("0.8", false),
-        Answers("0.5", true),
+        Answers("0.8", true),
         Answers("0.4", false),
       ])
     );
@@ -82,7 +83,7 @@ List<Question> getQuestions(){
       Question("On lance cinq fois de suite une pièce de monnaie parfaitement équilibré. La probabilité d'avoir exactement trois fois la face pile est:",
       [
         Answers("1", false),
-        Answers("(1/5)^5", false),
+        Answers("(1/2)^5", false),
         Answers("(5/16)", true),
         // Answers("", false),
       ])
@@ -90,18 +91,19 @@ List<Question> getQuestions(){
     list.add(
       Question("X est une variable aléatoire qui suit la loi normale centré réduite alors p(2<=T<=2.24) est égale à:",
       [
+        
         Answers("0.9772", false),
         Answers("0.025", false),
         Answers("0.0103", true),
-        // Answers("", false),
+    
       ])
     );
     list.add(
       Question("X est une variable aléatoire qui suit la loi normale centré réduite alors p(-1.96<=T<=2) est égale à:",
       [
-        Answers("0.9522", false),
+        Answers("0.9522", true),
         Answers("1.952", false),
-        Answers("0.9652", true),
+        Answers("0.9652", false),
         // Answers("", false),
       ])
     );
@@ -118,8 +120,9 @@ List<Question> getQuestions(){
       Question("On lance un dé non pipé à six faces et on s'intéresse au succès 'Obtenir le numéro 5'. On lance 18 fois ce dé et on designe par X la variable aléatoire égale au nombre de 5 obtenu, alors l'écart-type de X est:",
       [
         Answers("√(5/6)", false),
-        Answers("√(3)", false),
         Answers("√(5/2)", true),
+        Answers("√(3)", false),
+        
         // Answers("", false),
       ])
     );
@@ -137,8 +140,9 @@ List<Question> getQuestions(){
       [
         Answers("A est un évènement improbable", false),
         Answers("A est un évènement certain", false),
-        Answers("A est un évènement incertain", true),
-        Answers("A est un évènement nul", false),
+        Answers("A est un évènement nul", true),
+        Answers("A est un évènement incertain", false),
+        
       ])
     );
     list.add(
@@ -153,9 +157,9 @@ List<Question> getQuestions(){
     list.add(
       Question("On lance simultanément 3 pièces de monnaie et on note A l’évènement : « on obtient au moins une fois « pile » ». L’évènement contraire est ",
       [
-        Answers("On n’obtient jamais 'pile'", false),
-        Answers(" On n’obtient que des 'faces'", false),
-        Answers(" On obtient au moins 2 fois 'pile'", true),
+        Answers("On n’obtient jamais 'pile'", true),
+        Answers(" On n’obtient que des 'faces'", true),
+        Answers(" On obtient au moins 2 fois 'pile'", false),
         // Answers("", false),
       ])
     );
@@ -182,7 +186,7 @@ List<Question> getQuestions(){
       Question("X est une variable aléatoire qui suit une loi binomiale de paramètres n et p. L’espérance mathématique E(X) de X est donnée par",
       [
         Answers("E(X ) = npq", false),
-        Answers("E(X ) = np", false),
+        Answers("E(X ) = np", true),
         // Answers("Discrète", true),
         // Answers("", false),
       ])
