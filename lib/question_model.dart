@@ -71,11 +71,11 @@ List<Question> getQuestions(){
       ])
     );
     list.add(
-      Question("Une machine produit des objet dont 3% sont de mauvaise qualité. Un client reçoit un lot de 400 objets. La probabilité d'avoir plus de 5% d'objets défectueux dans ce lot est:",
+      Question("Lors du lancer d’une pièce, la probabilité d’obtenir pile est différente de celle d’obtenir face",
       [
-        Answers("0.6", false),
-        Answers("0.009", false),
-        Answers("0.015", true),
+        Answers("Faux", true),
+        Answers("Vrai", false),
+        // Answers("", true),
         // Answers("", false),
       ])
     );
@@ -83,7 +83,7 @@ List<Question> getQuestions(){
       Question("On lance cinq fois de suite une pièce de monnaie parfaitement équilibré. La probabilité d'avoir exactement trois fois la face pile est:",
       [
         Answers("1", false),
-        Answers("(1/2)^5", false),
+        Answers("(1/2)^5", true),
         Answers("(5/16)", true),
         // Answers("", false),
       ])
